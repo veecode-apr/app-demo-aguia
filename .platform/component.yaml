@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: app-demo-aguia
+  description: "app-demo-aguia"
+  annotations:
+    github.com/project-slug: veecode-apr/app-demo-aguia
+    backstage.io/techdocs-ref: dir:..
+    backstage.io/kubernetes-id: "app-demo-aguia"
+    vault.io/secrets-path: "app-demo-aguia"
+    grafana/dashboard-selector: "app-demo-aguia"
+    grafana/alert-label-selector: "alertname=app-demo-aguia"
+    argocd/proxy-url: '/argocd/api'
+    argocd/app-name: "app-demo-aguia"
+    kong-manager/service-name: veecode-apr.app-demo-aguia-service-0.8080
+    kong-manager/instance: /kong-manager/api
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/admin"

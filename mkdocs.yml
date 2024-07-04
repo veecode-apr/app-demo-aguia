@@ -1,0 +1,8 @@
+site_name: "app-demo-aguia"
+site_description: "app-demo-aguia"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
